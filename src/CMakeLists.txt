@@ -1,8 +1,2 @@
-project(urlshortener)
-
-set(
-  SRC
-  main.cpp
-)
-
-add_executable(${PROJECT_NAME} ${SRC})
+add_subdirectory(urlshortener)
+add_subdirectory(tests)
