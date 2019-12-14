@@ -25,4 +25,9 @@ def short_url(request):
     result_url = settings.SITE_NAME + 'r/' + hash_url
     print("result:", result_url)
     return HttpResponse(json.dumps({"short_url": result_url}), content_type="application/json")
-     
+
+def redirect_from_short(request, short_url):
+    full_url = get_url_by_hash(short_url)
+    print("short_url:", short_url)
+    print("full_url:", full_url)
+    return redirect(full_url)
