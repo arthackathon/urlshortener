@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <title>Shortener</title>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 30pt;
+      }
+      .main_table {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .url_form {
+        align: middle;
+        margin: center;
+        width: 500px;
+        height: 100px;
+      }
+      .submit_button {
+        color: #fff !important;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #4285F4;
+        padding: 15px;
+        border-radius: 30px;
+        display: inline-block;
+        border: none;
+        transition: all 0.4s ease 0s;
+        font-size:20pt;
+      }
+      .url_input {
+        height: 45px;
+        width: 250px;
+        border: 0;
+        border-bottom: 2px solid #1976D2;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        padding: 10px;
+        background: transparent;
+        color: #212F3D;
+      }
+    </style>
+  </head>
+  <body>
+
+    <table class=main_table><tr>
+      <td align=center>
+        <div class=url_form>
+          <table><tr>
+            <td>
+              <p for="url_input">URL: </p>
+            </td>
+            <td width=50px text-align=center>
+              <input class=url_input type="text" name="name" required>
+            </td>
+            <td>
+              <button type="submit" class=submit_button>Short!</button>
+            </td>
+          </tr></table>
+        </div>
+      </td>
+      </tr></table>
+  </body>
+</html>
