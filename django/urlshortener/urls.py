@@ -22,6 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('short/', short.index, name='index'),
     path('redirect_to_google', short.redirect_to_google, name='redirect_to_google'),
-    path('short_url/', short.short_url)
-    path('r^r/(?P<short_url>)/$
+    path('r^r/(?P<short_url>)/$', short.short_url)
 ]
