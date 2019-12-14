@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from handlers import short
+from urlshortener.handlers import short
 
 urlpatterns = [
     path('admin/', admin.site.urls),
