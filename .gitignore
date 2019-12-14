@@ -6,4 +6,6 @@ cmake-build-release/
 
 *__pycache__*
 
+*db.sqlite3*
+
 *.swp
