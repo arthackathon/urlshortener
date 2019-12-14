@@ -29,6 +29,7 @@
         text-transform: uppercase;
         text-decoration: none;
         background: #4285F4;
+        outline:none;
         padding: 20px;
         border-radius: 30px;
         display: inline-block;
@@ -78,7 +79,7 @@
           </tr>
           <tr>
             <td height=300pt>
-              <div height=300pt width=100% align=center style="font-size:40pt">
+              <div id="result-url" height=300pt width=100% align=center style="font-size:40pt">
               </div>
             </td>
           </tr>
@@ -92,13 +93,14 @@
     window.onload = function() {
       console.log("Page loaded");
       $("#submit-button").on("click", function () {
-        var html = document.documentElement.innerHTML;
+        let url = $("#url-input").val();
         $.ajax({
           url: '/short_url/',
           type: "POST",
-          data: {"html": html},
+          data: {"url": url},
           success: function (data) {
-            $("#result-url").last().html(data.url);
+            console.log("data:", data);
+            $("#result-url").last().html(data.short_url);
           }
         });
       });
