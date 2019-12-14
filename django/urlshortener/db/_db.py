@@ -22,8 +22,10 @@ def get_hash_by_url(url):
     return unique_code
 
 def get_url_by_hash(shortened_code):
-    url_object = Shortener.objects.get(shortened_code=shortened_code)
-    if url_object:
-        return url_object.url
-    else:
+    url_object = None
+    try:
+        url_object = Shortener.objects.get(shortened_code=shortened_code)
+    except Shortener.DoesNotExist:
         return None
+
+    return url_object.url
