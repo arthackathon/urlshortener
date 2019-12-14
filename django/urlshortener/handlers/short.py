@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from django.shortcuts import redirect
+from django.views.decorators.csrf import csrf_exempt
 
 from urlshortener.db import get_hash_by_url, get_url_by_hash
 from urlshortener import settings
@@ -12,6 +13,7 @@ def index(request):
 def redirect_to_google(request):
     return redirect('https://google.com')
 
+@csrf_exempt
 def short_url(request):
     url = request.POST.get('url')
     print("get url:", url)
