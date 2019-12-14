@@ -32,3 +32,7 @@ class DBTestCase(TestCase):
         url = "https://www.google.ru/search?q=qwfeqwfqw&oq=qwfeqwfqw&sourceid=chrome&ie=UTF-8"
 
         self.assertTrue(get_url_by_hash(get_hash_by_url(url)), url)
+
+    def test_get_url_by_random_hash(self):
+        random_hash = "wWEFWFedw23"
+        self.assertEqual(get_url_by_hash(random_hash), None)
