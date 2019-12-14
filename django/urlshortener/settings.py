@@ -27,7 +27,7 @@ DEBUG = True
 
 SITE_NAME = 'http://evgenstf.ru/'
 
-ALLOWED_HOSTS = ['95.142.45.197', 'http://evgenstf.ru/']
+ALLOWED_HOSTS = ['95.142.45.197', 'evgenstf.ru/']
 
 # Application definition
 
