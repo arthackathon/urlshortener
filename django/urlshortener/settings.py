@@ -25,6 +25,8 @@ SECRET_KEY = 'mny=g43=zl+8!2bnjgzvuj7-55#i#(98zwflhvw8qhx4xydzh*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+SITE_NAME = 'http://evgenstf.ru/'
+
 ALLOWED_HOSTS = ['95.142.45.197', 'http://evgenstf.ru/']
 
 # Application definition
