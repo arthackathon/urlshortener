@@ -7,6 +7,9 @@ from django.views.decorators.csrf import csrf_exempt
 from urlshortener.db import get_hash_by_url, get_url_by_hash
 from urlshortener import settings
 
+import json
+
+
 def index(request):
     return render(request, "index.html")
 
